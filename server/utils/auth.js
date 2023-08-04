@@ -16,7 +16,8 @@ module.exports = {
     }
 
     if (!token) {
-      return req;
+
+      return req
     }
 
     // verify token and get user data out of it
@@ -25,7 +26,8 @@ module.exports = {
       req.user = data;
     } catch {
       console.log('Invalid token');
-      return req;
+
+      return req
     }
 
     // send to next endpoint
